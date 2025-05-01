@@ -12,4 +12,6 @@ public class ApplicationDbContext : IdentityDbContext
 
     }
     public DbSet<NhanVien> NhanVien { get; set; }
+    public DbSet<KhachHang> KhachHang { get; set; }
+    public DbSet<MonAn> MonAn { get; set; }
 }

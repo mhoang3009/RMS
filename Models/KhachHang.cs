@@ -2,14 +2,13 @@ using System.ComponentModel.DataAnnotations;
 
 namespace RMS.Models
 {
-    public class NhanVien
+    public class KhachHang
     {
         [Key]
-        public int NhanVienId { get; set; }
+        public int KhachhangId { get; set; }
         public string? HoTen { get; set; }
         public string? DiaChi { get; set; }
         public string? SoDienThoai { get; set; }
-        public int NgaySinh { get; set; }
-        public string? ChucVu { get; set; }
+        public DateTime NgaySinh { get; set; }
     }
-}   
+}

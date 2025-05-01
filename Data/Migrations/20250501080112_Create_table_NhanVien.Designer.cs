@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RMS.Data;
 
@@ -10,9 +11,11 @@ using RMS.Data;
 namespace RMS.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250501080112_Create_table_NhanVien")]
+    partial class Create_table_NhanVien
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.0");
@@ -213,55 +216,6 @@ namespace RMS.Data.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("RMS.Models.KhachHang", b =>
-                {
-                    b.Property<int>("KhachhangId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("DiaChi")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("HoTen")
-                        .HasColumnType("TEXT");
-
-                    b.Property<DateTime>("NgaySinh")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("SoDienThoai")
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("KhachhangId");
-
-                    b.ToTable("KhachHang");
-                });
-
-            modelBuilder.Entity("RMS.Models.MonAn", b =>
-                {
-                    b.Property<int>("MonAnId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("DanhMuc")
-                        .HasColumnType("TEXT");
-
-                    b.Property<decimal>("Gia")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("HinhAnh")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("MoTa")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("TenMonAn")
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("MonAnId");
-
-                    b.ToTable("MonAn");
-                });
-
             modelBuilder.Entity("RMS.Models.NhanVien", b =>
                 {
                     b.Property<int>("NhanVienId")
@@ -277,8 +231,8 @@ namespace RMS.Data.Migrations
                     b.Property<string>("HoTen")
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("NgaySinh")
-                        .HasColumnType("INTEGER");
+                    b.Property<DateTime>("NgaySinh")
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("SoDienThoai")
                         .HasColumnType("TEXT");

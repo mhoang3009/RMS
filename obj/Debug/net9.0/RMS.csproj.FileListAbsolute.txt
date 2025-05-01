@@ -443,3 +443,4 @@ D:\HTTTQL\PMHT\RMS\obj\Debug\net9.0\refint\RMS.dll
 D:\HTTTQL\PMHT\RMS\obj\Debug\net9.0\RMS.pdb
 D:\HTTTQL\PMHT\RMS\obj\Debug\net9.0\RMS.genruntimeconfig.cache
 D:\HTTTQL\PMHT\RMS\obj\Debug\net9.0\ref\RMS.dll
+D:\HTTTQL\PMHT\RMS\obj\Debug\net9.0\RMS.sourcelink.json
